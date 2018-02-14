@@ -1,17 +1,20 @@
 // Keep track of the score
 let score = 0;
 
-let counter = document.cookie;
-let array = counter.split(";");
-let scoreAsString = array[0].replace("myScore=", "");
-score = Number(scoreAsString);
+document.load = onLoad();
+
+function onLoad() {
+    score = extractScoreFromString(document.cookie);
+    let scoreText = document.getElementById("score");
+    scoreText.innerHTML = score;
+}
 
 function extractScoreFromString(cookieString) {
     let counter = cookieString;
     let array = counter.split(";");
     let scoreAsString = array[0].replace("myScore=", "");
     let scoreAsNumber = Number(scoreAsString);
-    return Number()
+    return scoreAsNumber;
 }
 
 function onCookieClick() {
