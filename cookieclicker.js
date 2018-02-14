@@ -4,6 +4,7 @@ let score = 0;
 document.load = onLoad();
 
 function onLoad() {
+    console.log("onLoad()");
     score = extractScoreFromString(document.cookie);
     let scoreText = document.getElementById("score");
     scoreText.innerHTML = score;
