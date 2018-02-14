@@ -17,6 +17,7 @@ function extractScoreFromString(cookieString) {
     return scoreAsNumber;
 }
 
+//function functionName(arguments)
 function setScoreText(scoreNumber) {
     document.getElementById("score").innerHTML = scoreNumber;
 }
